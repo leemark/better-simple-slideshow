@@ -2,11 +2,12 @@
 body {
   background: #111;
   height: 100%;
+  width: 80%;    
+  margin: 1em auto;    
 }
 .diy-slideshow{
   position: relative;
-  display: block;
-  width: 80%;    
+  display: block;    
 }
 figure{
   position: absolute;
