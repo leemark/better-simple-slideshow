@@ -1,25 +1,25 @@
-.diy-slideshow{
+.bss-slides{
   position: relative;
   display: block;    
 }
-.diy-slideshow figure{
+.bss-slides figure{
   position: absolute;
   top: 0;
 }
-.diy-slideshow figure:first-child{
+.bss-slides figure:first-child{
   position: relative;
 }
-.diy-slideshow figure img{
+.bss-slides figure img{
   opacity: 0;
   transition: opacity 1.2s;
   backface-visibility: hidden;
 }
-.diy-slideshow figure.show img{
+.bss-slides .bss-show img{
   opacity: 1;
   backface-visibility: hidden;
 }
 
-.diy-slideshow figcaption{
+.bss-slides figcaption{
   position: absolute;
   font-family: sans-serif;
   font-size: .8em;
@@ -33,14 +33,14 @@
   opacity: 0;
   transition: opacity 1.2s;
 }
-.diy-slideshow figure.show figcaption{
+.bss-slides .bss-show figcaption{
   z-index: 2;
   opacity: 1;
 }
-.diy-slideshow figcaption a{
+.bss-slides figcaption a{
   color: #fff;    
 }
-.diy-slideshow .next, .diy-slideshow .prev{
+.bss-next, .bss-prev{
   color: #fff;
   position: absolute;
   background: #000;
@@ -52,17 +52,17 @@
   opacity: .3;
   user-select: none;
 }
-.diy-slideshow .next:hover, .diy-slideshow .prev:hover{
+.bss-next:hover, .bss-prev:hover{
   cursor: pointer;
   opacity: 1;
 }
-.diy-slideshow .next{
+.bss-next{
   right: -1px;
   padding: 10px 5px 15px 10px;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
 }
-.diy-slideshow .prev{
+.bss-prev{
   left: 0;
   padding: 10px 10px 15px 5px;
   border-top-right-radius: 3px;
