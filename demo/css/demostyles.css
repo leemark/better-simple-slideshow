@@ -1,0 +1,19 @@
+*{margin:0;padding:0;}
+body {
+  background: #111;
+  height: 100%;
+  width: 80%;    
+  margin: 1em auto;   
+  font-family: 'Open Sans', sans-serif;    
+  color: #fff;    
+}
+h1{
+ font-family: 'Open Sans Condensed', sans-serif;
+ font-weight: 700; 
+ margin-bottom: .2em;    
+}
+p{
+  margin: 10px 20px;
+  color: #fff;
+}
+a{color:#fff;}
