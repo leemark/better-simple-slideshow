@@ -3,7 +3,13 @@ body {
   background: #111;
   height: 100%;
   width: 80%;    
-  margin: 1em auto;    
+  margin: 1em auto;   
+  font-family: 'Open Sans', sans-serif;    
+  color: #fff;    
+}
+h1{
+ font-family: 'Open Sans Condensed', sans-serif;
+ font-weight: 700;    
 }
 .diy-slideshow{
   position: relative;
