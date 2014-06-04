@@ -15,7 +15,7 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <h1>A Better Simple Slideshow</h1>
-        <div class="bss-slides">
+        <div class="bss-slides num1">
 	       <figure class="bss-show">
 		      <img src="http://themarklee.com/wp-content/uploads/2013/12/snowying.jpg" width="100%" /><figcaption>"Snowying" by <a href="http://www.flickr.com/photos/fiddleoak/8511209344/">fiddleoak</a>.</figcaption> 
 	       </figure>
@@ -40,6 +40,40 @@
 
         <p>A simple DIY responsive slideshow made with HTML5, CSS3, and JavaScript. <a href="http://themarklee.com/2013/12/26/simple-diy-responsive-slideshow-made-html5-css3-javascript/">See the blog post for more information and a full walkthrough.</a></p>
         
+        <div class="bss-slides num2">
+	       <figure class="bss-show">
+		      <img src="http://themarklee.com/wp-content/uploads/2013/12/snowying.jpg" width="100%" /><figcaption>"Snowying" by <a href="http://www.flickr.com/photos/fiddleoak/8511209344/">fiddleoak</a>.</figcaption> 
+	       </figure>
+            <figure>
+                <img src="http://themarklee.com/wp-content/uploads/2013/12/starlight.jpg" width="100%" /><figcaption>"Starlight" by <a href="http://www.flickr.com/photos/chaoticmind75/10738494123/in/set-72157626146319517">ChaoticMind75</a>.</figcaption> 
+	       </figure>
+	       <figure>
+		      <img src="http://themarklee.com/wp-content/uploads/2013/12/snowstorm.jpg" width="100%" /><figcaption>"Snowstorm" by <a href="http://www.flickr.com/photos/tylerbeaulawrence/8539457508/">Beaulawrence</a>.</figcaption> 
+	       </figure>
+            <figure>
+		      <img src="http://themarklee.com/wp-content/uploads/2013/12/misty-winter-afternoon.jpg" width="100%" /><figcaption>"Misty winter afternoon" by <a href="http://www.flickr.com/photos/22746515@N02/5277611659/">Bert Kaufmann</a>.</figcaption> 
+	       </figure>
+            <figure>
+		      <img src="http://themarklee.com/wp-content/uploads/2013/12/good-morning.jpg" width="100%" /><figcaption>"Good Morning!" by <a href="http://www.flickr.com/photos/frank_wuestefeld/4306107546/">Frank Wuestefeld</a>.</figcaption> 
+	       </figure>
+            <span class="bss-prev">&laquo;</span>
+            <span class="bss-next">&raquo;</span>
+        </div> <!-- // bss-slides -->  
+        
         <script src="js/better-simple-slideshow.min.js"></script>
+        <script>
+        // these options don't actually do anything yet, but they will soon :)
+        var opts = {
+            auto : true,
+            fullScreen : true
+        };
+        makeBSS('.num1', opts);
+
+        var opts2 = {
+            auto : false,
+            fullScreen : true
+        };
+        makeBSS('.num2', opts2);
+        </script>
     </body>
 </html>
