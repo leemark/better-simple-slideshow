@@ -1,6 +1,9 @@
 .bss-slides{
   position: relative;
-  display: block;   
+  display: block;    
+}
+.bss-slides:focus{
+ outline: 0;
 }
 .bss-slides figure{
   position: absolute;
