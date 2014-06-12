@@ -43,7 +43,6 @@ var makeBSS = function (el, options) {
                         that.showCurrent();
                     }
                 };
-                el.focus();
             }
         }; // end Slideshow object 
     
