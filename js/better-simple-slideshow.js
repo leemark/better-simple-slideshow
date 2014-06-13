@@ -35,10 +35,10 @@ var makeBSS = function (el, options) {
                 
                 el.onkeydown = function (e) {
                     e = e || window.event;
-                    if (e.keyCode == '37') {
+                    if (e.keyCode === 37) {
                         that.counter--;
                         that.showCurrent();
-                    } else if (e.keyCode == '39') {
+                    } else if (e.keyCode === 39) {
                         that.counter++;
                         that.showCurrent();
                     }
