@@ -7,9 +7,19 @@ var makeBSS = function (el, options) {
                 this.el = el; // current slideshow container    
                 this.$items = el.querySelectorAll('figure'); // a collection of all of the slides, caching for performance
                 this.numItems = this.$items.length; // total number of slides
+
+                this.opts = {
+                    auto: (typeof options.auto === "undefined") ? false : options.auto,
+                    speed: (typeof options.speed === "undefined") ? 1500 : options.speed,
+                    fullScreen: (typeof options.fullScreen === "undefined") ? false : options.fullScreen
+                };
+                
                 this.$items[0].classList.add('bss-show'); // add show class to first figure 
                 this.injectControls(el);
                 this.addEventListeners(el);
+                if (this.opts.auto) {
+                    this.autoCycle(this.opts.speed);
+                }
             },
             showCurrent: function () {
                 var itemToShow = Math.abs(this.counter % this.numItems);// uses remainder (aka modulo) operator to get the actual index of the element to show  
@@ -65,11 +75,18 @@ var makeBSS = function (el, options) {
                         that.showCurrent();
                     }
                 };
+            },
+            autoCycle: function (speed) {
+                var that = this;
+                window.setInterval(function () {
+                    that.counter++;
+                    that.showCurrent();
+                }, speed);
             }
         }; // end Slideshow object 
-    
+        
     // make instances of Slideshow as needed
-    [].forEach.call($slideshows, function (el, optioms) {
+    [].forEach.call($slideshows, function (el) {
         $slideshow = Object.create(Slideshow);
         $slideshow.init(el, options);
     });
