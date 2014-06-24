@@ -7,6 +7,8 @@ var makeBSS = function (el, options) {
                 this.el = el; // current slideshow container    
                 this.$items = el.querySelectorAll('figure'); // a collection of all of the slides, caching for performance
                 this.numItems = this.$items.length; // total number of slides
+                this.$items[0].classList.add('bss-show'); // add show class to first figure 
+                this.injectControls(el);
                 this.addEventListeners(el);
             },
             showCurrent: function () {
@@ -20,6 +22,26 @@ var makeBSS = function (el, options) {
   
                 // add .show to the one item that's supposed to have it
                 this.$items[itemToShow].classList.add('bss-show');
+            },
+            injectControls: function (el) {
+            // build and inject prev/next controls
+                // first create all the new elements
+                var spanPrev = document.createElement("span"),
+                    spanNext = document.createElement("span"),
+                    docFrag = document.createDocumentFragment();
+        
+                // add classes
+                spanPrev.classList.add('bss-prev');
+                spanNext.classList.add('bss-next');
+        
+                // add contents
+                spanPrev.innerHTML = '&laquo;';
+                spanNext.innerHTML = '&laquo;';
+                
+                // append elements to fragment, then append fragment to DOM
+                docFrag.appendChild(spanPrev);
+                docFrag.appendChild(spanNext);
+                el.appendChild(docFrag);
             },
             addEventListeners: function (el) {
                 var that = this;
