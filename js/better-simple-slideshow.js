@@ -36,7 +36,7 @@ var makeBSS = function (el, options) {
         
                 // add contents
                 spanPrev.innerHTML = '&laquo;';
-                spanNext.innerHTML = '&laquo;';
+                spanNext.innerHTML = '&raquo;';
                 
                 // append elements to fragment, then append fragment to DOM
                 docFrag.appendChild(spanPrev);
