@@ -21,9 +21,14 @@ var makeBSS = function (el, options) {
                     this.autoCycle(this.opts.speed);
                 }
             },
-            showCurrent: function () {
-                var itemToShow = this.counter;// uses remainder (aka modulo) operator to get the actual index of the element to show  
-  
+            showCurrent: function (i) {
+                // increment or decrement this.counter depending on whether i === 1 or i === -1
+                if(i>0){
+                    this.counter = (this.counter + 1 === this.numItems)?0:this.counter+1;   
+                } else {
+                    this.counter = (this.counter - 1 < 0)?this.numItems-1:this.counter-1;
+                }
+
                 // remove .show from whichever element currently has it 
                 // http://stackoverflow.com/a/16053538/2006057
                 [].forEach.call(this.$items, function (el) {
@@ -31,7 +36,7 @@ var makeBSS = function (el, options) {
                 });
   
                 // add .show to the one item that's supposed to have it
-                this.$items[itemToShow].classList.add('bss-show');
+                this.$items[this.counter].classList.add('bss-show');
             },
             injectControls: function (el) {
             // build and inject prev/next controls
@@ -56,31 +61,26 @@ var makeBSS = function (el, options) {
             addEventListeners: function (el) {
                 var that = this;
                 el.querySelector('.bss-next').addEventListener('click', function () {
-                    that.counter = (that.counter + 1 === that.numItems)?0:that.counter+1;
-                    that.showCurrent();
+                    that.showCurrent(1); // increment & show
                 }, false);
             
                 el.querySelector('.bss-prev').addEventListener('click', function () {
-                    that.counter = (that.counter - 1 < 0)?that.numItems-1:that.counter-1;
-                    that.showCurrent();
+                    that.showCurrent(-1); // decrement & show
                 }, false);
                 
                 el.onkeydown = function (e) {
                     e = e || window.event;
                     if (e.keyCode === 37) {
-                        that.counter--;
-                        that.showCurrent();
+                        that.showCurrent(-1); // decrement & show
                     } else if (e.keyCode === 39) {
-                        that.counter++;
-                        that.showCurrent();
+                        that.showCurrent(1); // increment & show
                     }
                 };
             },
             autoCycle: function (speed) {
                 var that = this;
                 window.setInterval(function () {
-                    that.counter++;
-                    that.showCurrent();
+                    that.showCurrent(1); // increment & show
                 }, speed);
             }
         }; // end Slideshow object 
