@@ -22,7 +22,7 @@ var makeBSS = function (el, options) {
                 }
             },
             showCurrent: function () {
-                var itemToShow = Math.abs(this.counter % this.numItems);// uses remainder (aka modulo) operator to get the actual index of the element to show  
+                var itemToShow = this.counter;// uses remainder (aka modulo) operator to get the actual index of the element to show  
   
                 // remove .show from whichever element currently has it 
                 // http://stackoverflow.com/a/16053538/2006057
@@ -56,12 +56,12 @@ var makeBSS = function (el, options) {
             addEventListeners: function (el) {
                 var that = this;
                 el.querySelector('.bss-next').addEventListener('click', function () {
-                    that.counter++;
+                    that.counter = (that.counter + 1 === that.numItems)?0:that.counter+1;
                     that.showCurrent();
                 }, false);
             
                 el.querySelector('.bss-prev').addEventListener('click', function () {
-                    that.counter--;
+                    that.counter = (that.counter - 1 < 0)?that.numItems-1:that.counter-1;
                     that.showCurrent();
                 }, false);
                 
