@@ -24,10 +24,10 @@ var makeBSS = function (el, options) {
             },
             showCurrent: function (i) {
                 // increment or decrement this.counter depending on whether i === 1 or i === -1
-                if(i>0){
-                    this.counter = (this.counter + 1 === this.numItems)?0:this.counter+1;   
+                if (i > 0) {
+                    this.counter = (this.counter + 1 === this.numItems) ? 0 : this.counter + 1;
                 } else {
-                    this.counter = (this.counter - 1 < 0)?this.numItems-1:this.counter-1;
+                    this.counter = (this.counter - 1 < 0) ? this.numItems - 1 : this.counter - 1;
                 }
 
                 // remove .show from whichever element currently has it 
@@ -79,12 +79,12 @@ var makeBSS = function (el, options) {
                 };
             },
             autoCycle: function (el, speed, pauseOnHover) {
-                var that = this;
-                var interval = window.setInterval(function () {
-                    that.showCurrent(1); // increment & show
-                }, speed);
+                var that = this,
+                    interval = window.setInterval(function () {
+                        that.showCurrent(1); // increment & show
+                    }, speed);
                 
-                if(pauseOnHover){
+                if (pauseOnHover) {
                     el.addEventListener('mouseover', function () {
                         interval = clearInterval(interval);
                     }, false);
@@ -92,7 +92,7 @@ var makeBSS = function (el, options) {
                         interval = window.setInterval(function () {
                             that.showCurrent(1); // increment & show
                         }, speed);
-                    }, false);       
+                    }, false);
                 } // end pauseonhover
                 
             }
