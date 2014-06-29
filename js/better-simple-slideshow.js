@@ -10,7 +10,8 @@ var makeBSS = function (el, options) {
 
                 this.opts = {
                     auto: (typeof options.auto === "undefined") ? false : options.auto,
-                    speed: (typeof options.speed === "undefined") ? 1500 : options.speed,
+                    speed: (typeof options.auto.speed === "undefined") ? 1500 : options.auto.speed,
+                    pauseOnHover: (typeof options.auto.pauseOnHover === "undefined") ? false : options.auto.pauseOnHover,
                     fullScreen: (typeof options.fullScreen === "undefined") ? false : options.fullScreen
                 };
                 
@@ -18,7 +19,7 @@ var makeBSS = function (el, options) {
                 this.injectControls(el);
                 this.addEventListeners(el);
                 if (this.opts.auto) {
-                    this.autoCycle(this.opts.speed);
+                    this.autoCycle(this.el, this.opts.speed, this.opts.pauseOnHover);
                 }
             },
             showCurrent: function (i) {
@@ -77,11 +78,23 @@ var makeBSS = function (el, options) {
                     }
                 };
             },
-            autoCycle: function (speed) {
+            autoCycle: function (el, speed, pauseOnHover) {
                 var that = this;
-                window.setInterval(function () {
+                var interval = window.setInterval(function () {
                     that.showCurrent(1); // increment & show
                 }, speed);
+                
+                if(pauseOnHover){
+                    el.addEventListener('mouseover', function () {
+                        interval = clearInterval(interval);
+                    }, false);
+                    el.addEventListener('mouseout', function () {
+                        interval = window.setInterval(function () {
+                            that.showCurrent(1); // increment & show
+                        }, speed);
+                    }, false);       
+                } // end pauseonhover
+                
             }
         }; // end Slideshow object 
         

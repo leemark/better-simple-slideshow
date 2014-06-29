@@ -66,8 +66,10 @@
         makeBSS('.num1', opts);
 
         var opts2 = {
-            auto : true,
-            speed : 5000,
+            auto : {
+                speed : 2500, 
+                pauseOnHover: true
+            },
             fullScreen : true
         };
         makeBSS('.num2', opts2);
