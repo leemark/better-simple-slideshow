@@ -88,3 +88,23 @@
 .bss-fullscreen:hover{
   opacity: 1;   
 }
+:-webkit-full-screen .bss-fullscreen{
+    background: rgba(0,0,0,.6) url(../img/compress_ffffff_64.png);
+    background-size: contain;
+}
+:-moz-full-screen .bss-fullscreen{
+    background: rgba(0,0,0,.6) url(../img/compress_ffffff_64.png);
+    background-size: contain;
+}
+:-ms-fullscreen .bss-fullscreen{
+    background: rgba(0,0,0,.6) url(../img/compress_ffffff_64.png);
+    background-size: contain;
+}
+:full-screen .bss-fullscreen{
+    background: rgba(0,0,0,.6) url(../img/compress_ffffff_64.png);
+    background-size: contain;
+}
+:fullscreen .bss-fullscreen{
+    background: rgba(0,0,0,.6) url(../img/compress_ffffff_64.png);
+    background-size: contain;
+}
