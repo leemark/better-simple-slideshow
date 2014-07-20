@@ -21,6 +21,9 @@ var makeBSS = function (el, options) {
                 if (this.opts.auto) {
                     this.autoCycle(this.el, this.opts.speed, this.opts.pauseOnHover);
                 }
+                if (this.opts.fullScreen) {
+                    this.addFullScreen(this.el);
+                }
             },
             showCurrent: function (i) {
                 // increment or decrement this.counter depending on whether i === 1 or i === -1
@@ -95,7 +98,44 @@ var makeBSS = function (el, options) {
                     }, false);
                 } // end pauseonhover
                 
-            }
+            },
+            addFullScreen: function(el){
+                var that = this,
+                fsControl = document.createElement("span");
+                
+                fsControl.classList.add('bss-fullscreen');
+                el.appendChild(fsControl);
+                el.querySelector('.bss-fullscreen').addEventListener('click', function () {
+                    that.toggleFullScreen(el);
+                }, false);
+            },
+            toggleFullScreen: function(el){
+                // https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Using_full_screen_mode
+                if (!document.fullscreenElement &&    // alternative standard method
+                    !document.mozFullScreenElement && !document.webkitFullscreenElement &&   
+                    !document.msFullscreenElement ) {  // current working methods
+                    if (document.documentElement.requestFullscreen) {
+                      el.requestFullscreen();
+                    } else if (document.documentElement.msRequestFullscreen) {
+                      el.msRequestFullscreen();
+                    } else if (document.documentElement.mozRequestFullScreen) {
+                      el.mozRequestFullScreen();
+                    } else if (document.documentElement.webkitRequestFullscreen) {
+                      el.webkitRequestFullscreen(el.ALLOW_KEYBOARD_INPUT);
+                    }
+                } else {
+                    if (document.exitFullscreen) {
+                      document.exitFullscreen();
+                    } else if (document.msExitFullscreen) {
+                      document.msExitFullscreen();
+                    } else if (document.mozCancelFullScreen) {
+                      document.mozCancelFullScreen();
+                    } else if (document.webkitExitFullscreen) {
+                      document.webkitExitFullscreen();
+                    }
+                }
+            } // end toggleFullScreen
+            
         }; // end Slideshow object 
         
     // make instances of Slideshow as needed

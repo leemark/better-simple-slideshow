@@ -78,3 +78,21 @@
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
 }
+.bss-fullscreen{
+  display: block;
+  width: 24px;
+  height: 24px;    
+  background: rgba(0,0,0,.6) url(../img/arrows-alt_ffffff_64.png); 
+  -webkit-background-size: contain; 
+  background-size: contain;
+  position: absolute;
+  bottom: 10px;
+  left: 7px;
+  border: 1px solid rgba(255,255,255,.5);
+  border-radius: 3px;    
+  cursor: pointer;    
+  opacity: .3;
+} 
+.bss-fullscreen:hover{
+  opacity: 1;   
+}
