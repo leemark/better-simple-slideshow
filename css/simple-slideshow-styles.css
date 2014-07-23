@@ -80,55 +80,53 @@
 }
 .bss-fullscreen{
   display: block;
-  width: 24px;
-  height: 24px;    
-  background: rgba(0,0,0,.6) url(../img/arrows-alt_ffffff_64.png); 
+  width: 32px;
+  height: 32px;    
+  background: rgba(0,0,0,.4) url(../img/arrows-alt_ffffff_64.png); 
   -webkit-background-size: contain; 
   background-size: contain;
   position: absolute;
-  bottom: 10px;
-  left: 7px;
-  border: 1px solid rgba(255,255,255,.5);
-  border-radius: 3px;    
+  top: 5px;
+  left: 5px;   
   cursor: pointer;    
   opacity: .3;
 } 
 .bss-fullscreen:hover{
-  opacity: 1;   
+  opacity: .8;   
 }
 :-webkit-full-screen .bss-fullscreen{
-    background: rgba(0,0,0,.6) url(../img/compress_ffffff_64.png);
+    background: rgba(0,0,0,.4) url(../img/compress_ffffff_64.png);
     -webkit-background-size: contain;
     background-size: contain;
 }
 :-moz-full-screen .bss-fullscreen{
-    background: rgba(0,0,0,.6) url(../img/compress_ffffff_64.png);
+    background: rgba(0,0,0,.4) url(../img/compress_ffffff_64.png);
     background-size: contain;
 }
 :-ms-fullscreen .bss-fullscreen{
-    background: rgba(0,0,0,.6) url(../img/compress_ffffff_64.png);
+    background: rgba(0,0,0,.4) url(../img/compress_ffffff_64.png);
     background-size: contain;
 }
 :full-screen .bss-fullscreen{
-    background: rgba(0,0,0,.6) url(../img/compress_ffffff_64.png);
+    background: rgba(0,0,0,.4) url(../img/compress_ffffff_64.png);
     -webkit-background-size: contain;
     background-size: contain;
 }
 :-webkit-full-screen .bss-fullscreen{
-    background: rgba(0,0,0,.6) url(../img/compress_ffffff_64.png);
+    background: rgba(0,0,0,.4) url(../img/compress_ffffff_64.png);
     -webkit-background-size: contain;
     background-size: contain;
 }
 :-moz-full-screen .bss-fullscreen{
-    background: rgba(0,0,0,.6) url(../img/compress_ffffff_64.png);
+    background: rgba(0,0,0,.4) url(../img/compress_ffffff_64.png);
     background-size: contain;
 }
 :-ms-fullscreen .bss-fullscreen{
-    background: rgba(0,0,0,.6) url(../img/compress_ffffff_64.png);
+    background: rgba(0,0,0,.4) url(../img/compress_ffffff_64.png);
     background-size: contain;
 }
 :fullscreen .bss-fullscreen{
-    background: rgba(0,0,0,.6) url(../img/compress_ffffff_64.png);
+    background: rgba(0,0,0,.4) url(../img/compress_ffffff_64.png);
     -webkit-background-size: contain;
     background-size: contain;
 }
