@@ -116,10 +116,10 @@ var makeBSS = function (el, options) {
             addSwipe: function(el){
                 var that = this,
                     ht = new Hammer(el);
-                ht.on('swipeleft', function(e) {
+                ht.on('swiperight', function(e) {
                     that.showCurrent(-1); // decrement & show
                 });
-                ht.on('swiperight', function(e) {
+                ht.on('swipeleft', function(e) {
                     that.showCurrent(1); // increment & show
                 });
             },
