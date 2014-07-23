@@ -56,12 +56,15 @@
 	       </figure>
         </div> <!-- // bss-slides -->  
         
+        <script src="demo/js/hammer.min.js"></script><!-- for swipe support on touch interfaces -->
+        
         <script src="js/better-simple-slideshow.js"></script>
         <script>
 
         var opts = {
             auto : false,
-            fullScreen : false
+            fullScreen : false, 
+            swipe : true
         };
         makeBSS('.num1', opts);
 
@@ -70,7 +73,8 @@
                 speed : 2500, 
                 pauseOnHover: true
             },
-            fullScreen : true
+            fullScreen : true,
+            swipe : true
         };
         makeBSS('.num2', opts2);
         </script>

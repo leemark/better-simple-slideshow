@@ -12,7 +12,8 @@ var makeBSS = function (el, options) {
                     auto: (typeof options.auto === "undefined") ? false : options.auto,
                     speed: (typeof options.auto.speed === "undefined") ? 1500 : options.auto.speed,
                     pauseOnHover: (typeof options.auto.pauseOnHover === "undefined") ? false : options.auto.pauseOnHover,
-                    fullScreen: (typeof options.fullScreen === "undefined") ? false : options.fullScreen
+                    fullScreen: (typeof options.fullScreen === "undefined") ? false : options.fullScreen,
+                    swipe: (typeof options.swipe === "undefined") ? false : options.swipe
                 };
                 
                 this.$items[0].classList.add('bss-show'); // add show class to first figure 
@@ -23,6 +24,9 @@ var makeBSS = function (el, options) {
                 }
                 if (this.opts.fullScreen) {
                     this.addFullScreen(this.el);
+                }
+                if (this.opts.swipe) {
+                    this.addSwipe(this.el);
                 }
             },
             showCurrent: function (i) {
@@ -108,6 +112,16 @@ var makeBSS = function (el, options) {
                 el.querySelector('.bss-fullscreen').addEventListener('click', function () {
                     that.toggleFullScreen(el);
                 }, false);
+            },
+            addSwipe: function(el){
+                var that = this,
+                    ht = new Hammer(el);
+                ht.on('swipeleft', function(e) {
+                    that.showCurrent(-1); // decrement & show
+                });
+                ht.on('swiperight', function(e) {
+                    that.showCurrent(1); // increment & show
+                });
             },
             toggleFullScreen: function(el){
                 // https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Using_full_screen_mode
