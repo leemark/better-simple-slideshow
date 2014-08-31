@@ -2,15 +2,25 @@
 body {
   background: #111;
   height: 100%;
-  width: 80%;    
-  margin: 1em auto;   
+  width: 100%;  
   font-family: 'Open Sans', sans-serif;    
   color: #fff;    
 }
-h1{
+header{
+  position: absolute;
+  z-index: 9999;
+  width: 100%;    
+  background: rgba(0,0,0,.5);    
+}
+h1{   
  font-family: 'Open Sans Condensed', sans-serif;
  font-weight: 700; 
- margin-bottom: .2em;    
+ margin: .2em;
+ display: inline-block;       
+}
+header p{
+ display: inline-block; 
+ font-size: .9em;    
 }
 p{
   margin: 10px 20px;
