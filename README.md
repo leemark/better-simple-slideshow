@@ -59,3 +59,6 @@ makeBSS('.slideshow-class-goes-here', opts);
 
 ## Demo/Examples
 See [demo slideshows here](http://leemark.github.io/better-simple-slideshow/).
+
+## Better Than What?
+The name "Better Simple Slideshow" isn't meant to disparage your favorite javascript slideshow, or to imply that this is the best slideshow script out there (far from it, actually). It's just meant to be better than [the earlier version that it evolved out of](http://themarklee.com/2013/12/26/simple-diy-responsive-slideshow-made-html5-css3-javascript/) :)
