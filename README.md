@@ -25,9 +25,9 @@ This is a fairly basic slideshow, written in javascript. This is a dual-purpose 
 
         </div>    
     ```    
-2. include the script: js/better-simple-slideshow.min.js or js/better-simple-slideshow.js
-3. include the stylesheet css/simple-slideshow-styles.css
-4. initalize the slideshow:
+2. Include the script: js/better-simple-slideshow.min.js or js/better-simple-slideshow.js
+3. Include the stylesheet css/simple-slideshow-styles.css
+4. Initialize the slideshow:
 
     ```html
     <script>
@@ -36,8 +36,18 @@ This is a fairly basic slideshow, written in javascript. This is a dual-purpose 
     ```    
 
 ## Options
-...
 
+```javascript
+var opts = {
+            auto : { //auto-advancing slides? accepts boolean (true/false) or object
+                speed : 2500, // speed to advance slides at. accepts number of milliseconds
+                pauseOnHover : true // pause advancing on mouseover? accepts boolean
+            },
+            fullScreen : true, // show fullscreen toggle button? accepts boolean
+            swipe : true // support swiping on tousch devices? accepts boolean, requires hammer.js
+        };
+        makeBSS('.num2', opts2);
+```
 
 
 ## Demo/Examples
