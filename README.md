@@ -36,17 +36,24 @@ This is a fairly basic slideshow, written in javascript. This is a dual-purpose 
     ```    
 
 ## Options
-
+To customize functionality, create an options object, then pass it into `makeBSS()` as the second argument, as seen below:  
 ```javascript
+
 var opts = {
-            auto : { //auto-advancing slides? accepts boolean (true/false) or object
-                speed : 2500, // speed to advance slides at. accepts number of milliseconds
-                pauseOnHover : true // pause advancing on mouseover? accepts boolean
+            //auto-advancing slides? accepts boolean (true/false) or object
+            auto : { 
+                // speed to advance slides at. accepts number of milliseconds
+                speed : 2500, 
+                // pause advancing on mouseover? accepts boolean
+                pauseOnHover : true 
             },
-            fullScreen : true, // show fullscreen toggle button? accepts boolean
-            swipe : true // support swiping on tousch devices? accepts boolean, requires hammer.js
+            // show fullscreen toggle? accepts boolean
+            fullScreen : true, 
+            // support swiping on touch devices? accepts boolean, requires hammer.js
+            swipe : true 
         };
-        makeBSS('.num2', opts2);
+        
+makeBSS('.slideshow-class-goes-here', opts);
 ```
 
 
