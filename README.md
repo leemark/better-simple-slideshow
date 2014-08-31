@@ -11,7 +11,10 @@ This is a fairly basic slideshow, written in javascript. This is a dual-purpose 
 * written in vanilla JS--no jQuery dependency (much :sparkling_heart: for [jQuery](https://github.com/jquery/jquery) though!)
 
 ## Getting Started
-1. HTML markup for the slideshow should look basically like this, with a container element wrapping the whole thing (doesn't have to be a &lt;div&gt;) and each slide is a &lt;figure&gt;.        ```html
+1. HTML markup for the slideshow should look basically like this, with a container element wrapping the whole thing (doesn't have to be a &lt;div&gt;) and each slide is a &lt;figure&gt;.        
+
+
+```html
     <div class="slideshow-class-goes-here">
         <figure>
             <img src="path/to/img" width="100%" />
@@ -22,6 +25,7 @@ This is a fairly basic slideshow, written in javascript. This is a dual-purpose 
         
     </div>    
 ```    
+
 2. include the script: js/better-simple-slideshow.min.js or js/better-simple-slideshow.js
 3. include the stylesheet css/simple-slideshow-styles.css
 4. initalize the slideshow:
