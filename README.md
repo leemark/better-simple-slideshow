@@ -28,11 +28,13 @@ This is a fairly basic slideshow, written in javascript. This is a dual-purpose 
 2. include the script: js/better-simple-slideshow.min.js or js/better-simple-slideshow.js
 3. include the stylesheet css/simple-slideshow-styles.css
 4. initalize the slideshow:
+
     ```html
     <script>
         makeBSS('.slideshow-class-goes-here');
     </script>
     ```    
+
 ## Options
 ...
 
