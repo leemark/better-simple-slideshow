@@ -12,18 +12,33 @@ header{
   width: 100%;    
   background: rgba(0,0,0,.5);    
 }
+h1, h2, h3{   
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700; 
+}    
 h1{   
- font-family: 'Open Sans Condensed', sans-serif;
- font-weight: 700; 
- margin: .2em;
+ margin: .2em .5em;
  display: inline-block;       
 }
 header p{
  display: inline-block; 
  font-size: .9em;    
 }
+.content{
+    margin: 1em 2em;    
+}
+.content ul{
+    margin: 1em 2em;   
+}
+.gist{
+    width: 90%;
+    margin: 2em auto;
+}
 p{
   margin: 10px 20px;
   color: #fff;
 }
 a{color:#fff;}
+.num2{
+    width: 50%;
+}
