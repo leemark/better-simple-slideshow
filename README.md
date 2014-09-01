@@ -21,7 +21,7 @@ This is a fairly basic slideshow, written in javascript. This is a dual-purpose 
                 <figcaption>Caption goes here</figcaption> 
             </figure>
 
-            <-- more figures here as needed -->
+            <!-- more figures here as needed -->
 
         </div>    
     ```    
