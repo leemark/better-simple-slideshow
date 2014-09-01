@@ -30,6 +30,10 @@ header p{
 .content ul, .content ol{
     margin: .8em 1em .8em 2em;   
 }
+span.code{
+    font-family: "Lucida Console", "Lucida Sans Typewriter", Monaco, "Bitstream Vera Sans Mono", monospace;   
+    color: #999;
+}
 .gist{
     margin: 1em 1em 2em 2em;
 }
