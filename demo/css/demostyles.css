@@ -54,4 +54,7 @@ a{color:#fff;}
     header span{
         display: none;   
     }
+    .gist{
+        width: 100%;
+    }
 }
