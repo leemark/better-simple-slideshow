@@ -33,9 +33,12 @@ header p{
     width: 90%;
     margin: 2em auto;
 }
-a{color:#fff;}
+a{ 
+    color:#fff;
+}
 .num2{
-    width: 50%;
+    width: 90%;
+    margin: 2em auto;
 }
 
 @media screen and (max-width: 830px){
