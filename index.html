@@ -16,7 +16,7 @@
         <![endif]-->
         <header>
             <h1>A Better Simple Slideshow</h1>
-            <p>A simple DIY responsive JavaScript slideshow. [<a href="https://github.com/leemark/better-simple-slideshow">GitHub repo</a>]</p>
+            <p><span class="desc">A simple DIY responsive JavaScript slideshow.</span> [<a href="https://github.com/leemark/better-simple-slideshow">GitHub repo</a>]</p>
         </header>    
         <div class="bss-slides num1" tabindex="1" autofocus="autofocus">
             <figure>
@@ -93,17 +93,17 @@ To customize functionality, create an options object, then pass it into makeBSS(
 <script src="js/better-simple-slideshow.min.js"></script>
 <script>
 var opts = {
-    auto : false,
+    auto : {
+        speed : 3500, 
+        pauseOnHover : true
+    },
     fullScreen : false, 
     swipe : true
 };
 makeBSS('.num1', opts);
 
 var opts2 = {
-    auto : {
-        speed : 2500, 
-        pauseOnHover : true
-    },
+    auto : false,
     fullScreen : true,
     swipe : true
 };
