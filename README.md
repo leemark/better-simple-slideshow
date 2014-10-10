@@ -1,5 +1,5 @@
 # A Better Simple Slideshow
-This is a fairly basic slideshow, written in javascript. This is a dual-purpose project, it's meant to be something you can drop right into your page and use if you so choose, but it's also meant as an example/tutorial script showing how to build a simple DIY slideshow from scratch on your own. A [tutorial/walkthrough blog post will be published here](http://themarklee.com) fairly soon.   
+This is a fairly basic slideshow, written in javascript. This is a dual-purpose project, it's meant to be something you can drop right into your page and use if you so choose, but it's also meant as an example/tutorial script showing how to build a simple DIY slideshow from scratch on your own. [Here is a tutorial/walkthrough](http://themarklee.com/2014/10/05/better-simple-slideshow/).
 
 ## Features
 * fully responsive
