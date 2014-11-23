@@ -8,6 +8,7 @@
 .bss-slides figure{
   position: absolute;
   top: 0;
+  width: 100%;
 }
 .bss-slides figure:first-child{
   position: relative;
