@@ -151,7 +151,7 @@ var makeBSS = function (el, options) {
                 }
             } // end toggleFullScreen
             
-        }; // end Slideshow object 
+        }; // end Slideshow object .....
         
     // make instances of Slideshow as needed
     [].forEach.call($slideshows, function (el) {
