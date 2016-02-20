@@ -15,7 +15,7 @@ This is a fairly basic slideshow, written in javascript. This is a dual-purpose 
 
 1. HTML markup for the slideshow should look basically like this, with a container element wrapping the whole thing (doesn't have to be a &lt;div&gt;) and each slide is a &lt;figure&gt;.        
     ```html
-        <div class="slideshow-class-goes-here">
+        <div class="bss-slides">
             <figure>
                 <img src="path/to/img" width="100%" />
                 <figcaption>Caption goes here</figcaption> 
@@ -31,7 +31,7 @@ This is a fairly basic slideshow, written in javascript. This is a dual-purpose 
 
     ```html
     <script>
-        makeBSS('.slideshow-class-goes-here');
+        makeBSS('.bss-slides');
     </script>
     ```    
 
@@ -53,7 +53,7 @@ var opts = {
             swipe : true 
         };
         
-makeBSS('.slideshow-class-goes-here', opts);
+makeBSS('.bss-slides', opts);
 ```
 
 
