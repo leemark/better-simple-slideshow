@@ -3,13 +3,11 @@ var makeBSS = function (el, options) {
         $slideshow = {},
         Slideshow = {
             init: function (el, options) {
-                this.counter = 0; // to keep track of current slide
-                this.el = el; // current slideshow container    
-                this.$items = el.querySelectorAll('figure'); // a collection of all of the slides, caching for performance
-                this.numItems = this.$items.length; // total number of slides
+
                 options = options || {}; // if options object not passed in, then set to empty object 
                 options.auto = options.auto || false; // if options.auto object not passed in, then set to false
                 this.opts = {
+                    selector: (typeof options.selector === "undefined") ? "figure" : options.selector,
                     auto: (typeof options.auto === "undefined") ? false : options.auto,
                     speed: (typeof options.auto.speed === "undefined") ? 1500 : options.auto.speed,
                     pauseOnHover: (typeof options.auto.pauseOnHover === "undefined") ? false : options.auto.pauseOnHover,
@@ -17,6 +15,10 @@ var makeBSS = function (el, options) {
                     swipe: (typeof options.swipe === "undefined") ? false : options.swipe
                 };
                 
+                this.counter = 0; // to keep track of current slide
+                this.el = el; // current slideshow container    
+                this.$items = el.querySelectorAll(this.opts.selector); // a collection of all of the slides, caching for performance
+                this.numItems = this.$items.length; // total number of slides
                 this.$items[0].classList.add('bss-show'); // add show class to first figure 
                 this.injectControls(el);
                 this.addEventListeners(el);
