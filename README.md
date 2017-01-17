@@ -40,6 +40,8 @@ To customize functionality, create an options object, then pass it into `makeBSS
 ```javascript
 
 var opts = {
+            // default selector is "figure"
+            selector: ".my-selector",
             //auto-advancing slides? accepts boolean (true/false) or object
             auto : { 
                 // speed to advance slides at. accepts number of milliseconds
