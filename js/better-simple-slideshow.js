@@ -96,12 +96,15 @@ var makeBSS = function (el, options) {
                 
                 if (pauseOnHover) {
                     el.addEventListener('mouseover', function () {
-                        interval = clearInterval(interval);
+                        clearInterval(interval);
+                        interval = null;
                     }, false);
                     el.addEventListener('mouseout', function () {
-                        interval = window.setInterval(function () {
-                            that.showCurrent(1); // increment & show
-                        }, speed);
+                        if(!interval) {
+                            interval = window.setInterval(function () {
+                                that.showCurrent(1); // increment & show
+                            }, speed);
+                        }
                     }, false);
                 } // end pauseonhover
                 
