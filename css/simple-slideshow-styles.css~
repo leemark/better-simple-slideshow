@@ -1,10 +1,13 @@
 .bss-slides{
   position: relative;
   display: block; 
-  line-height: 0;/*removes the gap if you put a border on the slideshow div*/   
+   line-height: 0;/*removes the gap if you put a border on the slideshow div*/   
 }
 figcaption {
-  line-height: 1.5; /* restores line-height to the child element*/
+	line-height: 1.5; /* restores line-height to the child element*/
+	}
+.bss-slides:focus{
+ outline: 0;
 }
 .bss-slides figure{
   position: absolute;
@@ -16,7 +19,9 @@ figcaption {
 }
 .bss-slides figure img{
   opacity: 0;
+  -webkit-transition: opacity 1.2s;
   transition: opacity 1.2s;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 .bss-slides .bss-show{
@@ -24,6 +29,7 @@ figcaption {
 }
 .bss-slides .bss-show img{
   opacity: 1;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   position: relative; 
 }
@@ -40,6 +46,7 @@ figcaption {
   background: rgba(0,0,0, .25);
   border-radius: 2px;
   opacity: 0;
+  -webkit-transition: opacity 1.2s;
   transition: opacity 1.2s;
 }
 .bss-slides .bss-show figcaption{
@@ -59,6 +66,9 @@ figcaption {
   font-size: 2em;
   margin-top: -1.2em;
   opacity: .3;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 .bss-next:hover, .bss-prev:hover{
@@ -82,6 +92,7 @@ figcaption {
   width: 32px;
   height: 32px;    
   background: rgba(0,0,0,.4) url(../img/arrows-alt_ffffff_64.png); 
+  -webkit-background-size: contain; 
   background-size: contain;
   position: absolute;
   top: 5px;
@@ -94,6 +105,7 @@ figcaption {
 }
 :-webkit-full-screen .bss-fullscreen{
     background: rgba(0,0,0,.4) url(../img/compress_ffffff_64.png);
+    -webkit-background-size: contain;
     background-size: contain;
 }
 :-moz-full-screen .bss-fullscreen{
@@ -106,9 +118,24 @@ figcaption {
 }
 :full-screen .bss-fullscreen{
     background: rgba(0,0,0,.4) url(../img/compress_ffffff_64.png);
+    -webkit-background-size: contain;
+    background-size: contain;
+}
+:-webkit-full-screen .bss-fullscreen{
+    background: rgba(0,0,0,.4) url(../img/compress_ffffff_64.png);
+    -webkit-background-size: contain;
+    background-size: contain;
+}
+:-moz-full-screen .bss-fullscreen{
+    background: rgba(0,0,0,.4) url(../img/compress_ffffff_64.png);
+    background-size: contain;
+}
+:-ms-fullscreen .bss-fullscreen{
+    background: rgba(0,0,0,.4) url(../img/compress_ffffff_64.png);
     background-size: contain;
 }
 :fullscreen .bss-fullscreen{
     background: rgba(0,0,0,.4) url(../img/compress_ffffff_64.png);
+    -webkit-background-size: contain;
     background-size: contain;
 }
