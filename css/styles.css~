@@ -6,6 +6,9 @@
 figcaption {
   line-height: 1.5; /* restores line-height to the child element*/
 }
+.bss-slides:focus{
+ outline: 0;
+}
 .bss-slides figure{
   position: absolute;
   top: 0;

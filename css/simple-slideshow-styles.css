@@ -1,6 +1,10 @@
 .bss-slides{
   position: relative;
-  display: block;    
+  display: block; 
+  line-height: 0;/*removes the gap if you put a border on the slideshow div*/   
+}
+figcaption {
+  line-height: 1.5; /* restores line-height to the child element*/
 }
 .bss-slides:focus{
  outline: 0;
